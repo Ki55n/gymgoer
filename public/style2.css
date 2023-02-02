@@ -1,0 +1,94 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+}
+.header{
+    min-height:1em;
+    padding:10px;
+}
+.header img{
+    height: 20px;
+}
+.title{
+    color:rgb(144, 40, 165);
+    text-align: center;
+}
+.main{
+    background: rgb(144, 40, 165);
+    border-radius:10px;
+    padding:10px;
+    padding-top:30px;
+    min-height:60vh;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:40px;
+}
+.main .options{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;;
+}
+.first,.second{
+    border:1px solid black;
+    padding:10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.selected{
+    background:rgb(216, 168, 10);
+    color:black;
+}
+.unselected{
+    background:rgb(165, 158, 158);
+    color:grey;
+}
+.item input{
+    border-radius:7px;
+    height:35px;
+    width:80%;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    gap:25px;
+    padding:20px;
+}
+.icon{
+    height:30px;
+    width:50px;
+    display:flex;
+    flex-direction: column;
+    font-size:0.6em;
+    color:white;
+    justify-content: center;
+}
+.icon img{
+    height:25px;
+    width:25px;
+}
+form .item{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+}
+form .reg{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+form .reg input{
+    padding:5px 15px;
+    border-radius: 7px;
+    color:rgb(99, 16, 116);
+    font-weight: 800;
+}
+.cen{
+    display:flex;
+    justify-content: center;
+}

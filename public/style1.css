@@ -1,0 +1,117 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+}
+.header{
+    min-height:1em;
+}
+.title{
+    color:rgb(144, 40, 165);
+    text-align: center;
+}
+.main{
+    background: rgb(144, 40, 165);
+    border-radius:10px;
+    padding:10px;
+    padding-top:30px;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:40px;
+}
+.item input{
+    border-radius:7px;
+    height:35px;
+    width:80%;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    gap:12px;
+    padding:20px;
+}
+.icon{
+    height:30px;
+    width:50px;
+    display:flex;
+    flex-direction: column;
+    font-size:0.6em;
+    color:white;
+    justify-content: center;
+}
+.icon img{
+    height:25px;
+    width:25px;
+}
+form .item{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+}
+form .reg{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+form .reg input{
+    padding:5px 15px;
+    border-radius: 7px;
+    color:rgb(99, 16, 116);
+    font-weight: 800;
+}
+.cen{
+    display:flex;
+    justify-content: center;
+}
+
+.or{
+    width:80%;
+    text-align: center;
+    border-bottom: 1px solid white;
+    line-height: 0.1em;
+    margin:10px 0 20px;
+}
+.or span{
+    padding:0 10px;
+    background: rgb(144, 40, 165);
+    color:#fff;
+    font-weight: bold;
+}
+.social .item img{
+    height:1.5em;
+}
+.social .item .exp{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.social .item{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    width:fit-content;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+.social .item span{
+    font-size: 0.8em;
+    color:rgb(243, 222, 222);
+}
+.yell span{
+    color: rgb(235, 235, 21) !important;
+}
+.ul{
+    cursor: pointer;
+}
+a:hover{
+    cursor:pointer;
+}
