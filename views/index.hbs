@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/2f57eae505.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="title"><h1>TESTAPP</h1></div>
+        <div class="main">
+            <form action="/register" method="post">
+                <div class="item">
+                    <div class="icon">
+                        <img src="img/name.png" alt=""> <span>Name</span>
+                    </div>
+                    <input type="text" name="name">
+                </div>
+                <div class="item">
+                    <div class="icon">
+                        <img src="img/email.png" alt=""> <span>Email</span>
+                    </div>
+                    <input type="email" name="email">
+                </div>
+                <div class="item"> 
+                    <div class="icon">
+                    <img src="img/userid.png" alt=""> <span>User ID</span>
+                    </div>
+                <input type="text" name="user"></div>
+                <div class="item">
+                    <div class="icon">
+                        <img src="img/password.png" alt=""> <span>Password</span>
+                    </div>
+                    <input type="password" name="password">
+                </div>
+                <div class="reg"><input type="submit" name="register" value="Register Now"></div>
+            </form>
+            <div class="cen"><div class="or"><span>or</span></div></div>
+            <div class="social">
+                <div class="item">
+                    <div class="exp"><img src="img/g.png" alt=""> <span>Sign up with Google</span></div>
+                    <div class="exp"><img src="img/f.png" alt=""> <span>Sign up with Facebook</span></div>
+                    <div class="exp"><img src="img/a.png" alt=""> <span>Sign up with Apple</span></div>
+                </div>
+                <div class="item yell"><span>Already having an account?</span></div>
+                <form  class="item ul" action="/login" method="get">
+                    <button>Click here to signin</button>
+               </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

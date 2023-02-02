@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        var email,pass;
+        $("#login").click(function(){
+            userid=$("#user").val();
+            pass=$("#password").val();
+            console.log(userid);
+            console.log(pass);
+            // $.post("/signin",{userid:userid,password:pass},function(data){
+            //     if(data=='done') {
+            //         window.location.href=`final.html?userid=${userid}`;
+            //     }
+            //     else{
+            //         alert("Invaid Credntials");
+            //     }
+            // });
+        });
+    });
+    </script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header"><img src="img/back.png" alt=""></div>
+        <div class="title"><h1>TESTAPP</h1></div>
+        <div class="main">
+            <div class="options">
+                <div class="first selected">USER</div>
+                <div class="second unselected">OWNER</div>
+            </div>
+            <form action="/signin" method="POST">
+                <div class="item"> 
+                    <div class="icon">
+                    <img src="img/userid.png" alt=""> <span>User ID</span>
+                    </div>
+                <input type="text" name="user"></div>
+                <div class="item">
+                    <div class="icon">
+                        <img src="img/password.png" alt=""> <span>Password</span>
+                    </div>
+                    <input type="password" name="password">
+                </div>
+                <div class="reg"><input type="submit" id="login" value="Login"></div>
+            </form>
+        </div>
+        
+    </div>
+      {{#if error}}
+        <span style="color:red">{{error}}</span>
+      {{/if}}
+</body>
+</html>

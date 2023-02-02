@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="img/back.png" alt="">
+        </div>
+            <img class="user" src="img/user.jpg" alt="">
+            <div class="code">
+                
+                 {{#if name }}
+                   <div class="name">{{name}}</div>
+                    {{else}}
+                  <div class="name">""</div>
+                    {{/if}}
+                <div class="qr"><img src="../qr.png" alt=""></div>
+                <div class="ucode">
+                    <div class="title">User Code</div>
+                    {{#if message }}
+                    <div class="text">{{message}}</div>
+                    {{else}}
+                   <div class="text">ok</div>
+                    {{/if}}
+                </div>
+            </div>
+        <table class="log">
+            <tr><th colspan="3">Entry Log</th></tr>
+            <tr><td>Name</td><td>Location</td><td>Timestamp</td></tr>
+            <tr><td>demo</td><td>demo</td><td>demo</td></tr>
+            <tr><td>demo</td><td>demo</td><td>demo</td></tr>
+            <tr><td>demo</td><td>demo</td><td>demo</td></tr>
+            <tr><td>demo</td><td>demo</td><td>demo</td></tr>
+        </table>
+    </div>
+</body>
+</html>
