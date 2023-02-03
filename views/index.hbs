@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="style1.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2f57eae505.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -18,24 +22,24 @@
                     <div class="icon">
                         <img src="img/name.png" alt=""> <span>Name</span>
                     </div>
-                    <input type="text" name="name">
+                    <input type="text" name="name" required>
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="img/email.png" alt=""> <span>Email</span>
                     </div>
-                    <input type="email" name="email">
+                    <input type="email" name="email" required>
                 </div>
                 <div class="item"> 
                     <div class="icon">
                     <img src="img/userid.png" alt=""> <span>User ID</span>
                     </div>
-                <input type="text" name="user"></div>
+                <input type="text" name="user" required></div>
                 <div class="item">
                     <div class="icon">
                         <img src="img/password.png" alt=""> <span>Password</span>
                     </div>
-                    <input type="password" name="password">
+                    <input type="password" name="password" required>
                 </div>
                 <div class="reg"><input type="submit" name="register" value="Register Now"></div>
             </form>
@@ -51,6 +55,9 @@
                     <button>Click here to signin</button>
                </form>
             </div>
+            {{#if message}}
+            <span style="color:red">{{message}}</span>
+          {{/if}}
         </div>
     </div>
 </body>

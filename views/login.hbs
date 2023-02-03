@@ -9,19 +9,37 @@
     <script>
     $(document).ready(function(){
         var email,pass;
-        $("#login").click(function(){
-            userid=$("#user").val();
-            pass=$("#password").val();
-            console.log(userid);
-            console.log(pass);
-            // $.post("/signin",{userid:userid,password:pass},function(data){
-            //     if(data=='done') {
-            //         window.location.href=`final.html?userid=${userid}`;
-            //     }
-            //     else{
-            //         alert("Invaid Credntials");
-            //     }
-            // });
+        $("#logout").click(function(){
+             window.location.href="/";
+        });
+          $("#login").click(function(){
+              
+               if ($( "#sec" ).hasClass('selected')) {
+                  var pass=$("#owner");
+                   pass.attr('value', 'login1');
+               }
+        });  
+        $("#fir").click(function(){
+              
+             if ($( "#fir" ).hasClass('unselected')) {
+	            $( "#fir" ).removeClass( 'unselected');
+            } 
+            if ($( "#sec" ).hasClass('selected')) {
+	            $( "#sec" ).removeClass( 'selected');
+                 $( "#sec" ).addClass( 'unselected');
+                 } 
+          $( "#fir" ).addClass( 'selected');
+        });
+        $("#sec").click(function(){
+              
+                if ($( "#sec" ).hasClass('unselected')) {
+	            $( "#sec" ).removeClass( 'unselected');
+                 } 
+                 if ($( "#fir" ).hasClass('selected')) {
+	            $( "#fir" ).removeClass( 'selected');
+                $( "#fir" ).addClass( 'unselected');
+                 } 
+               $( "#sec" ).addClass( 'selected');
         });
     });
     </script>
@@ -29,26 +47,27 @@
 </head>
 <body>
     <div class="container">
-        <div class="header"><img src="img/back.png" alt=""></div>
+        <div class="header"><img  id="logout" src="img/back.png" alt=""></div>
         <div class="title"><h1>TESTAPP</h1></div>
         <div class="main">
             <div class="options">
-                <div class="first selected">USER</div>
-                <div class="second unselected">OWNER</div>
+                <div id="fir" class="first selected">USER</div>
+                <div id="sec" class="second unselected">OWNER</div>
             </div>
             <form action="/signin" method="POST">
                 <div class="item"> 
                     <div class="icon">
                     <img src="img/userid.png" alt=""> <span>User ID</span>
                     </div>
-                <input type="text" name="user"></div>
+                <input type="text" name="user" name="login" id="user" required></div>
                 <div class="item">
                     <div class="icon">
                         <img src="img/password.png" alt=""> <span>Password</span>
                     </div>
-                    <input type="password" name="password">
+                    <input type="hidden" id="owner" name="login" value="login"/>
+                    <input type="password" name="password" id="pass" required>
                 </div>
-                <div class="reg"><input type="submit" id="login" value="Login"></div>
+                <div class="reg"><input type="submit" id="login" value="login"></div>
             </form>
         </div>
         
